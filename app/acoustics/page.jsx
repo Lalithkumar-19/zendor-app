@@ -11,6 +11,11 @@ import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+export const metadata = {
+  title: "Acoustic Solutions & Panels | Zendor",
+  description: "Premium acoustic panels and soundproofing solutions for homes, studios, and offices. Expert installation and consultation available in Mumbai. Transform your space acoustically and aesthetically.",
+  keywords: ["acoustic panels", "soundproofing solutions", "studio acoustics", "home theater acoustics", "office sound treatment", "acoustic design mumbai"]
+};
 const AcousticsPage = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({

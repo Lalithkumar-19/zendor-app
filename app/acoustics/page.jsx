@@ -1,16 +1,6 @@
 "use client";
-
-import AdvancedTechnologySection from "@/components/acoustics/AdvancedTechnologySection";
-import { ApplicationsSection } from "@/components/acoustics/ApplicationsSection";
-import { ClientsSection } from "@/components/acoustics/ClientsSection";
-import ContactFormSection from "@/components/acoustics/ContactFormSection";
-import CustomSolutionsSection from "@/components/acoustics/CustomSolutionsSection";
-import { JourneySection } from "@/components/acoustics/JourneySection";
-import SustainableMaterialsSection from "@/components/acoustics/SustainableMaterialsSection";
-import Image from "next/image";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+// Remove the metadata export from this file
+// Keep the rest of the imports and component code
 export const metadata = {
   title: "Acoustic Solutions & Panels | Zendor",
   description: "Premium acoustic panels and soundproofing solutions for homes, studios, and offices. Expert installation and consultation available in Mumbai. Transform your space acoustically and aesthetically.",

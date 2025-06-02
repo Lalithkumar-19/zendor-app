@@ -4,10 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/Global/Navbar";
 import Footer from "@/components/Global/Footer";
 import ClientWrapper from "@/components/Global/ClientWrapper";
-import { usePathname } from "next/navigation";
-import { Provider, useDispatch } from "react-redux";
+import { Provider } from "react-redux";
 import store from "@/store";
-import clsx from "clsx";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +16,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-// in /lib/fonts.js
 
 export const metadata = {
   title: "Zendor - Premium Interior Solutions | Designer Wallpapers, Wooden Flooring & Acoustic Panels",
@@ -79,22 +76,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const pathname = usePathname();
-
-  const isHomePage = pathname === "/";
-  const isAdminPage = pathname.startsWith("/admin");
-
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Provider store={store}>
           <Navbar />
-          <main className={clsx({
-          "mt-25": !isHomePage&&!isAdminPage,
-          "mt-15": isAdminPage
-        })}>
+          <main>
             <ClientWrapper>{children}</ClientWrapper>
           </main>
         </Provider>
